@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a955359-8302-405f-afb1-0805e673f6c1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26BxXJvGwQst6jPGEEVE9DjkwG5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.25316453" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="File" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shu.fp.File" />
+      <module name="pl0_exp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shu.fp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shu.lexer.Lexer" />
+      <module name="pl0_exp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shu.lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="State" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shu.common.State" />
+      <module name="pl0_exp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shu.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Symbol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shu.lexer.Symbol" />
+      <module name="pl0_exp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shu.lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shu.test.Test" />
+      <module name="pl0_exp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.File" />
+        <item itemvalue="Application.Symbol" />
+        <item itemvalue="Application.State" />
+        <item itemvalue="Application.Lexer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a955359-8302-405f-afb1-0805e673f6c1" name="Default Changelist" comment="" />
+      <created>1646910819984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646910819984</updated>
+      <workItem from="1646910822606" duration="18068000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="742" y="172" key="#com.intellij.ide.util.MemberChooser" timestamp="1646918449533">
+      <screen x="0" y="25" width="1680" height="951" />
+    </state>
+    <state x="742" y="172" key="#com.intellij.ide.util.MemberChooser/0.25.1680.950@0.25.1680.950" timestamp="1646915968116" />
+    <state x="742" y="172" key="#com.intellij.ide.util.MemberChooser/0.25.1680.951@0.25.1680.951" timestamp="1646918449533" />
+    <state width="1327" height="235" key="GridCell.Tab.0.bottom" timestamp="1646933876163">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="235" key="GridCell.Tab.0.bottom/0.25.1680.950@0.25.1680.950" timestamp="1646933876163" />
+    <state width="1327" height="235" key="GridCell.Tab.0.bottom/0.25.1680.951@0.25.1680.951" timestamp="1646929762553" />
+    <state width="1327" height="235" key="GridCell.Tab.0.center" timestamp="1646933876162">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="235" key="GridCell.Tab.0.center/0.25.1680.950@0.25.1680.950" timestamp="1646933876162" />
+    <state width="1327" height="235" key="GridCell.Tab.0.center/0.25.1680.951@0.25.1680.951" timestamp="1646929762552" />
+    <state width="1327" height="235" key="GridCell.Tab.0.left" timestamp="1646933876162">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="235" key="GridCell.Tab.0.left/0.25.1680.950@0.25.1680.950" timestamp="1646933876162" />
+    <state width="1327" height="235" key="GridCell.Tab.0.left/0.25.1680.951@0.25.1680.951" timestamp="1646929762551" />
+    <state width="1327" height="235" key="GridCell.Tab.0.right" timestamp="1646933876162">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="235" key="GridCell.Tab.0.right/0.25.1680.950@0.25.1680.950" timestamp="1646933876162" />
+    <state width="1327" height="235" key="GridCell.Tab.0.right/0.25.1680.951@0.25.1680.951" timestamp="1646929762552" />
+    <state width="1327" height="232" key="GridCell.Tab.1.bottom" timestamp="1646933140358">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="232" key="GridCell.Tab.1.bottom/0.25.1680.950@0.25.1680.950" timestamp="1646933140358" />
+    <state width="1327" height="290" key="GridCell.Tab.1.bottom/0.25.1680.951@0.25.1680.951" timestamp="1646929066229" />
+    <state width="1327" height="232" key="GridCell.Tab.1.center" timestamp="1646933140357">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="232" key="GridCell.Tab.1.center/0.25.1680.950@0.25.1680.950" timestamp="1646933140357" />
+    <state width="1327" height="290" key="GridCell.Tab.1.center/0.25.1680.951@0.25.1680.951" timestamp="1646929066227" />
+    <state width="1327" height="232" key="GridCell.Tab.1.left" timestamp="1646933140357">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="232" key="GridCell.Tab.1.left/0.25.1680.950@0.25.1680.950" timestamp="1646933140357" />
+    <state width="1327" height="290" key="GridCell.Tab.1.left/0.25.1680.951@0.25.1680.951" timestamp="1646929066225" />
+    <state width="1327" height="232" key="GridCell.Tab.1.right" timestamp="1646933140358">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state width="1327" height="232" key="GridCell.Tab.1.right/0.25.1680.950@0.25.1680.950" timestamp="1646933140358" />
+    <state width="1327" height="290" key="GridCell.Tab.1.right/0.25.1680.951@0.25.1680.951" timestamp="1646929066228" />
+    <state x="417" y="62" key="SettingsEditor" timestamp="1646922469136">
+      <screen x="0" y="25" width="1680" height="951" />
+    </state>
+    <state x="417" y="62" key="SettingsEditor/0.25.1680.950@0.25.1680.950" timestamp="1646916156238" />
+    <state x="417" y="62" key="SettingsEditor/0.25.1680.951@0.25.1680.951" timestamp="1646922469136" />
+    <state x="708" y="270" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1646916028867">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state x="708" y="270" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.25.1680.950@0.25.1680.950" timestamp="1646916028867" />
+    <state x="649" y="239" width="597" height="490" key="find.popup" timestamp="1646933318823">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state x="649" y="239" width="597" height="490" key="find.popup/0.25.1680.950@0.25.1680.950" timestamp="1646933318823" />
+    <state x="594" y="225" key="search.everywhere.popup" timestamp="1646913791653">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state x="594" y="225" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1646913791653" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/shu/lexer/Lexer.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/shu/lexer/Lexer.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
