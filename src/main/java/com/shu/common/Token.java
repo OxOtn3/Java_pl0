@@ -1,5 +1,6 @@
 package com.shu.common;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -63,8 +64,8 @@ public enum Token {
     private String str;
     private String desc;
 
-    private static String[] tokens;
-    private static String[] tokenDesc;
+    private static Map<String, Token> tokens;
+    private static Map<String, Token> tokenDesc;
 
     private static Map<String, Token> keywordMap;
     private static Map<String, Token> operatorMap;
@@ -77,14 +78,17 @@ public enum Token {
     }
 
     private static void initTokens() {
-//        tokens = new String[Token.values().length];
-//        for (int i = 0; i < tokens.length; i++) {
-//            State.values()
-//        }
+        tokens = new HashMap<>();
+        for (Token t: Token.values()) {
+            tokens.put(t.str, t);
+        }
     }
 
     private static void initTokenDesc() {
-        tokenDesc = new String[Token.values().length];
+        tokenDesc = new HashMap<>();
+        for (Token t: Token.values()) {
+            tokens.put(t.desc, t);
+        }
     }
 
 
@@ -213,25 +217,23 @@ public enum Token {
         return val > relation_optr_beg.val && val < relation_optr_end.val;
     }
 
-    // 这里偷了个懒，因为前面没维护数组，导致时间复杂度为O(n)而不是O(1)
+    // O(1)
     public static Token getIdToken(String ident) {
-        for (Token t: Token.values()) {
-            if (t.str.equals(ident) && t.val > keyword_beg.val && t.val < keyword_end.val) {
+        if (tokens.containsKey(ident)) {
+            Token t = tokens.get(ident);
+            if (t.val > keyword_beg.val && t.val < keyword_end.val) {
                 return t;
             }
         }
         return IDENTSYM;
     }
 
-    // 同上
+    // O(1)
     public static Token getOptToken(String opt) {
-        for (Token t: Token.values()) {
-            if (t.str.equals(opt) && t.val > operator_beg.val && t.val < operator_end.val) {
-                if (t.val != relation_optr_beg.val && t.val != relation_optr_end.val) {
-                    return t;
-                } else {
-                    break;
-                }
+        if (tokens.containsKey(opt)) {
+            Token t = tokens.get(opt);
+            if (t.val > operator_beg.val && t.val < operator_end.val && t.val != relation_optr_beg.val && t.val != relation_optr_end.val) {
+                return t;
             }
         }
         return BADTOKEN;

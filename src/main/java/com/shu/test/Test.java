@@ -1,5 +1,7 @@
 package com.shu.test;
 
+import com.shu.common.State;
+import com.shu.common.Token;
 import com.shu.lexer.Lexer;
 import com.shu.lexer.Symbol;
 
@@ -13,7 +15,7 @@ import java.util.Map;
  * @description 简单测试
  */
 public class Test {
-    public static void test01() throws IOException {
+    public static void test01() {
         String filepath = "src/main/java/com/shu/assets/input01.txt";
         Lexer lexer = new Lexer(filepath);
         lexer.getSym();
@@ -32,7 +34,7 @@ public class Test {
         }
     }
 
-    public static void test02() throws IOException {
+    public static void test02() {
         String filepath = "src/main/java/com/shu/assets/input01.txt";
         Lexer lexer = new Lexer(filepath);
         lexer.getSym();
@@ -41,7 +43,7 @@ public class Test {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         test01();
 
         test02();
