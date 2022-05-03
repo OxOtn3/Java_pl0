@@ -37,6 +37,7 @@ public class Lexer {
         }
     }
 
+    // 读取一个字符
     public char getCh() {
         char ch = 0;
         try {
@@ -51,11 +52,17 @@ public class Lexer {
         return ch;
     }
 
+    // DFA方式获取符号
     public void getSym() {
+        // 当前识别的数字
         int num = 0;
+        // 当前识别的数字长度
         int numLen = 0;
+        // 当前识别的标识符或关键字
         char[] cr = new char[MAX_TOKEN_SIZE];
+        // 当前识别的标识符或关键字的索引
         int charIndex = 0;
+        // 当前状态
         State curState = State.START;
         char ch = getCh();
         boolean isEnd = false;
@@ -64,14 +71,17 @@ public class Lexer {
             switch (curState) {
                 case START:
                     if (CharUtil.isSpace(ch)) {
-
+                        // 空格，啥都不做
                     } else if (ch == '{') {
+                        // 注释开头
                         curState = State.COMMENT;
                     } else if (CharUtil.isDigit(ch)) {
+                        // 数字开头
                         curState = State.INNUM;
                         num = num * 10 + (ch - '0');
                         numLen++;
                     } else if (CharUtil.isLetter(ch)) {
+                        // 标识符开头
                         if (charIndex >= MAX_TOKEN_SIZE) {
                             System.out.println("标识符或关键字过长");
                             return;
@@ -86,6 +96,7 @@ public class Lexer {
                     } else if (ch == ':') {
                         curState = State.INBECOMES;
                     } else {
+                        // 单独字符
                         curState = State.START;
                         Token optToken = Token.getOptToken(String.valueOf(ch));
                         if (optToken != BADTOKEN) {
@@ -100,6 +111,7 @@ public class Lexer {
                         num = num * 10 + (ch - '0');
                         numLen++;
                     } else {
+                        // 数字结束
                         curState = State.START;
                         if (numLen > MAX_NUM_SIZE) {
                             System.out.println("数字过长");
@@ -109,6 +121,7 @@ public class Lexer {
                         }
                         num = 0;
                         numLen = 0;
+                        // 暂停对下一个字符的读取
                         continue LOOP;
                     }
                     break;
@@ -140,6 +153,7 @@ public class Lexer {
                             symbols.add(new Symbol(idToken, curLine));
                         }
                         charIndex = 0;
+                        // 暂停对下一个字符的读取
                         continue LOOP;
                     }
                     break;
@@ -182,12 +196,14 @@ public class Lexer {
                     symbols.add(new Symbol(LEQSYM, curLine));
                     continue LOOP;
             }
+            // 读取下一个字符
             ch = getCh();
             if (ch == '\uFFFF') isEnd = true;
 
         }
     }
 
+    // 保存词法分析结果
     public void save(String path) {
         StringBuilder sb = new StringBuilder();
         for (Symbol sym : symbols) {
