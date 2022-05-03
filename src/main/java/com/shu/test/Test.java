@@ -12,11 +12,11 @@ import java.util.Map;
 /**
  * @author oxotn3
  * @create 2022-03-11
- * @description 简单测试
+ * @description 实验一、实验二
  */
 public class Test {
     public static void test01() {
-        String filepath = "src/main/java/com/shu/assets/input01.txt";
+        String filepath = "src/main/java/com/shu/assets/a.txt";
         Lexer lexer = new Lexer(filepath);
         lexer.getSym();
 
@@ -35,12 +35,15 @@ public class Test {
     }
 
     public static void test02() {
-        String filepath = "src/main/java/com/shu/assets/input01.txt";
+        String filepath = "src/main/java/com/shu/assets/a.txt";
         Lexer lexer = new Lexer(filepath);
         lexer.getSym();
         for (Symbol s: lexer.symbols) {
             System.out.println(s.toString());
         }
+
+        String savePath = "src/main/java/com/shu/assets/a-result.txt";
+        lexer.save(savePath);
     }
 
     public static void main(String[] args) {
