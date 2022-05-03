@@ -52,7 +52,7 @@ public enum Token {
     CALLSYM("call", "callsym"),  // call
     CONSTSYM("const", "constsym"), // const
     VARSYM("var", "varsym"),   // var
-    PROCSYM("proc", "procsym"),  // procedure
+    PROCSYM("procedure", "procsym"),  // procedure
     ODDSYM("odd", "oddsym"),   // odd
     WRITESYM("write", "writesym"), // write
     READSYM("read", "readsym"),  // read
@@ -87,23 +87,18 @@ public enum Token {
     private static void initTokenDesc() {
         tokenDesc = new HashMap<>();
         for (Token t: Token.values()) {
-            tokens.put(t.desc, t);
+            tokenDesc.put(t.desc, t);
         }
     }
 
 
     private static void initKwMap() {
-//        keywordMap = new HashMap<>();
-//        for (int i = keyword_beg.val + 1; i < keyword_end.val; i++) {
-//            keywordMap[i]
-//        }
+
     }
 
     private static void initOptMap() {
 
     }
-
-    private static int nextVal;
 
 
     Token() {
@@ -135,6 +130,15 @@ public enum Token {
 
     public String getDesc() {
         return desc;
+    }
+
+    public String getLit() {
+        if (val >= 0 && val < tokens.size()) {
+            return desc;
+        } else {
+            return "token(" + val + ")";
+        }
+
     }
 
     @Override

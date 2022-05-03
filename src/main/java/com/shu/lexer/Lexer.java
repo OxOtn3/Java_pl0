@@ -7,6 +7,7 @@ import com.shu.util.CharUtil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +24,14 @@ public class Lexer {
 
     private File file;
 
-    private int line;          // 当前所在行号
+    private int curLine;          // 当前所在行号
 
     public List<Symbol> symbols = new ArrayList<>();  // 符号数组
 
     public Lexer(String filepath) {
         try {
             this.file = new File(filepath);
+            curLine = 1;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -43,7 +45,7 @@ public class Lexer {
             e.printStackTrace();
         }
         if (ch == '\n') {
-            this.line++;
+            curLine++;
         }
         ch = CharUtil.toLowerCase(ch);
         return ch;
@@ -87,7 +89,7 @@ public class Lexer {
                         curState = State.START;
                         Token optToken = Token.getOptToken(String.valueOf(ch));
                         if (optToken != BADTOKEN) {
-                            symbols.add(new Symbol(optToken));
+                            symbols.add(new Symbol(optToken, curLine));
                         } else {
                             System.out.println("未知字符: " + ch);
                         }
@@ -103,7 +105,7 @@ public class Lexer {
                             System.out.println("数字过长");
                             return;
                         } else {
-                            symbols.add(new Symbol(NUMBERSYM, num));
+                            symbols.add(new Symbol(NUMBERSYM, num, curLine));
                         }
                         num = 0;
                         numLen = 0;
@@ -115,7 +117,7 @@ public class Lexer {
                         // 注释结束
                         curState = State.START;
                     }
-                    continue;
+                    break;
                 case INID:
                     if (CharUtil.isLetter(ch) || CharUtil.isDigit(ch)) {
                         if (charIndex >= MAX_TOKEN_SIZE) {
@@ -133,9 +135,9 @@ public class Lexer {
                             for (int i = 0; i < charIndex; i++) {
                                 newVal[i] = cr[i];
                             }
-                            symbols.add(new Symbol(idToken, newVal));
+                            symbols.add(new Symbol(idToken, newVal, curLine));
                         } else {
-                            symbols.add(new Symbol(idToken));
+                            symbols.add(new Symbol(idToken, curLine));
                         }
                         charIndex = 0;
                         continue LOOP;
@@ -154,7 +156,7 @@ public class Lexer {
                         curState = State.GEQ;
                     } else {
                         curState = State.START;
-                        symbols.add(new Symbol(GEQSYM));
+                        symbols.add(new Symbol(GEQSYM, curLine));
                         continue LOOP;
                     }
                     break;
@@ -163,26 +165,41 @@ public class Lexer {
                         curState = State.LEQ;
                     } else {
                         curState = State.START;
-                        symbols.add(new Symbol(LEQSYM));
+                        symbols.add(new Symbol(LEQSYM, curLine));
                         continue LOOP;
                     }
                     break;
                 case BECOMES:
                     curState = State.START;
-                    symbols.add(new Symbol(BECOMESSYM));
+                    symbols.add(new Symbol(BECOMESSYM, curLine));
                     continue LOOP;
                 case GEQ:
                     curState = State.START;
-                    symbols.add(new Symbol(GEQSYM));
+                    symbols.add(new Symbol(GEQSYM, curLine));
                     continue LOOP;
                 case LEQ:
                     curState = State.START;
-                    symbols.add(new Symbol(LEQSYM));
+                    symbols.add(new Symbol(LEQSYM, curLine));
                     continue LOOP;
             }
             ch = getCh();
-            if (ch == -1 || ch == '\uFFFF') isEnd = true;
+            if (ch == '\uFFFF') isEnd = true;
 
+        }
+    }
+
+    public void save(String path) {
+        StringBuilder sb = new StringBuilder();
+        for (Symbol sym : symbols) {
+            sb.append(sym.toString());
+            sb.append("\n");
+        }
+        try {
+            PrintWriter pw = new PrintWriter(path);
+            pw.print(sb.toString());
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
